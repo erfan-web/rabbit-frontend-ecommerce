@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter_18pt-Regular.ttf") format(".ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter_18pt-Medium.ttf") format(".ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter_18pt-SemiBold.ttf") format(".ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter_18pt-Bold.ttf") format(".ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+#root {
+  font-family: "inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+@theme {
+  --color-primary: #ea2e0e;
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+  .hoverEffect {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of vertical scrollbar */
+  height: 10px; /* Height of horizontal scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* برای مرورگرهای مختلف */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.leftSwiperThumb .swiper-slide{
+  padding:5px;
+}
+.bottomSwiperThumb .swiper-slide{
+  padding:5px;
+}
+.swiper-slide-thumb-active img {
+  /* border: 1px solid var(--color-gray-200); */
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+}
+
+
