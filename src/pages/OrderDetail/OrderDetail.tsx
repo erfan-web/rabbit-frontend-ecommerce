@@ -13,7 +13,7 @@ const OrderDetail = () => {
 
   const { id } = useParams();
   useEffect(() => {
-    // if (!user) navigate("/");
+    if (!user) navigate("/");
     if (id) dispatch(fetchOrder(id));
   }, [id]);
 
