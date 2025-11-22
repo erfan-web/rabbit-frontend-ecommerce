@@ -15,13 +15,12 @@ import { useState } from "react";
 
 const AdminSidbar = () => {
   // const { user } = useSelector((store: RootState) => store.auth);
-  const [logoutLoading, setLogoutLoading] = useState<boolean>(false);
+
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const guestId = localStorage.getItem("guestId") as string;
 
   const logoutHandler = async () => {
-    setLogoutLoading(true);
     try {
       const actionResult = await dispatch(logoutUser());
 
@@ -37,8 +36,6 @@ const AdminSidbar = () => {
     } catch (err) {
       console.error("Unexpected error:", err);
       toast.error("Something went wrong.");
-    } finally {
-      setLogoutLoading(false);
     }
   };
 
