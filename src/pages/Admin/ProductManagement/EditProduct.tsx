@@ -17,7 +17,6 @@ import type { Product } from "../../../types";
 
 const EditProduct = () => {
   const { selectedProduct } = useSelector((state: RootState) => state.products);
-  const [uploading, setUploading] = useState(false);
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
 
@@ -74,7 +73,6 @@ const EditProduct = () => {
     formData.append("upload_preset", "rabbit");
 
     try {
-      setUploading(true);
 
       const res = await fetch(
         "https://api.cloudinary.com/v1_1/erfan/image/upload",
@@ -92,8 +90,6 @@ const EditProduct = () => {
       }));
     } catch (err) {
       console.error("UPLOAD ERROR:", err);
-    } finally {
-      setUploading(false);
     }
   };
 
