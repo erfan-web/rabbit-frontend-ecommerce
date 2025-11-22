@@ -11,7 +11,6 @@ import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../redux/store";
 import { toast } from "sonner";
 import { fetchCart } from "../../redux/slices/cartSlice";
-import { useState } from "react";
 
 const AdminSidbar = () => {
   // const { user } = useSelector((store: RootState) => store.auth);
