@@ -85,4 +85,14 @@
   box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
 }
 
+@keyframes topLoader {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+
 
